@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <!-- Container to wrap everything-->
+    <div id="container">
+        <!-- Brand of website -->
+        <header></header>
+        <!-- Main Navigation -->
+        <nav>
+            <ul>
+             <li><a href="index.html">Home</a></li>
+            <li><a href="pets.html">See Available Pets</a></li>
+            <li><a href="contact.html">See Available Pets</a></li>
+
+            </ul>
+        </nav><!-- End Main Navigation -->
+
+        <!-- Main Content -->
+        <main>
+        <h1>Contact us</h1>
+        <p>Leave your message, we will contact you back soon.</p>
+        
+        <form action=" /signup" method="post">
+            <fieldset>
+                <legend>User Personal information</legend>
+                <label>Enter your full name</label>
+                <input type="text" name=""name">
+                <label>Enter your email</label>
+                <input type="email" name=""email">
+                <label>Enter your phone number</label>
+                <input type="text" name=""phone">
+                <label>Select your gender</label>
+                <input type="radio" name="gender" value="male"/>Male
+                <input type="radio" name="gender" value="female"/>Female 
+                <label>How shoud we contact you?</label>
+                <select>
+                    <option>Email</option>
+                    <option>Phone</option>
+                </select>
+                <label>Tell us the reason of your visit today: </label>
+                <textarea id="reason" name="reason" rows="5" cols="30"></textarea>
+                <input type="submit" value="sign-up">
+            </fieldset>
+        </form>
+        </main>
+        <!-- End Main Content -->
+
+    <!-- Footer information --> 
+    <footer>&copy; Copyright 2025</footer>
+    </div> <!-- End Container --> 
+    </body>
+</html>
