@@ -39,7 +39,7 @@
                 margin: 50px;
             }
             main h1 {
-                color: rgb(129, 141, 179);
+                color: rgb(10, 51, 48);
                 font-family: arial;
             }
             table {
@@ -58,7 +58,7 @@
                 font-weight: 600;
                 height: 40px;
                 padding-top: 15px;
-                color: #753a30;
+                color: #000;
             }
             label {
                 display: block;
@@ -80,8 +80,8 @@
             }
             footer {
                 height: 40px;
-                background-color: rgb(129, 141, 179);
+                background-color: rgb(10, 51, 48);
                 text-align: center;
                 padding-top: 20px;
-                color: rgb(211, 218, 240);
+                color: #9ad4de;
             }
