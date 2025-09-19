@@ -89,3 +89,22 @@
                 padding-top: 20px;
                 color: #9ad4de;
             }
+            #gallery {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr); /* 每行 5 张 */
+                gap: 10px;
+                list-style-type: none;
+                padding: 0;
+            }
+
+            #gallery li {
+                text-align: center;
+            }
+
+            #gallery .photo {
+                width: 180px;
+                height: 180px;
+                object-fit: cover; /* 保持比例裁剪 */
+                border-radius: 8px;
+                border: 2px solid #ccc;
+            }

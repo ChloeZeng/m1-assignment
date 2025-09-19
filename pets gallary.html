@@ -21,53 +21,10 @@
 
         <!-- Main Content -->
         <main>
-        <h1>Available Pets</h1>
-        <p>Available Pets</p>
+        <h1>Pet Gallery</h1>
+        <p>Meet some of our adorable pets waiting for a forever home:</p>
 
-        <ul id="album">
-       <li id=“photo”><img src=“images/”></li>
-
-        </ul>
-        
-
-        <!-- table border="1">
-            <caption>Calories Comparison of Popular Burgers</caption>
-            <thead></thead>
-            <tr>
-                <th>Type</th>
-                <th>Big Mac</th>
-                <th>Whopper</th>
-                <th>Dave's Double</th>
-                <th>Whataburger</th>
-            </tr>
-            <tbody>
-                <tr>
-                    <td>Calories</td>
-                    <td>563</td>
-                    <td>677</td>
-                    <td>870</td>
-                    <td>590</td>
-                </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td>30gm</td>
-                    <td>40gm</td>
-                    <td>51gm</td>
-                    <td>25gm</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>Vendor</td>
-                    <td>MacD</td>
-                    <td>Burger King</td>
-                    <td>Wendys</td>
-                    <td>Whataburger</td>
-                </tr>
-            </tfoot>
-        </table --> 
-
-
+        <ul id="gallery"></ul>
         </main>
         <!-- End Main Content -->
 
@@ -75,26 +32,23 @@
     <footer>&copy; Copyright 2025</footer>
     </div> <!-- End Container --> 
 
-    <script>
-        var photos = []; //Declare an empty array to store image element
-        var fileNames = []; //Declare an empty element to store image file name
-        var imageList = []; //Declarean empty array to store html list that contain an image
-        var image; //Declare an empty variable to store the assembled image list codes
-        var openList = "<li id='photo'>"; //Declare a variable to contain open list tag
-        var closeList = "</li>"; // Declare a variable to contain close list tag
+<script>
+  var photos = []; // 存放 <img> 元素
+  var fileNames = []; // 存放图片文件名
+  var imageList = []; // 存放 <li> + <img> 组合
+  var image; 
+  var openList = "<li>";
+  var closeList = "</li>";
 
-        //Create a loop to create 6 images starting with indes of 0
-        for (var i=0; i<6; i++) {
-            fileNames.push("winterland"+(i + 1));//Create image file name and storein the array
-            photos.push("<img src='images/" + fileNames[i] + ".jpg'>"); //assemble file name into image element and store in an array
-            image = openList + photos[i] + closeList; // assemble image element from array with list elements and store in a variable
-            imageList.push(image); //store(push)the assembled list codes into an array
-        
-        }
-        //Display all six image codes stored in the array
-        document.getElementById("album").innerHTML = imageList.join("");
-       
-    </script>
+  // 循环生成 10 张宠物照片
+  for (var i = 1; i <= 10; i++) {
+    photos.push("<img class='photo' src='images/dog" + i + ".png' alt='dog " + i + "'>");
+    image = openList + photos[i-1] + closeList;
+    imageList.push(image);
+  }
+
+  document.getElementById("gallery").innerHTML = imageList.join("");
+</script>
 
     </body>
 </html>
