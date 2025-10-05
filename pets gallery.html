@@ -80,5 +80,34 @@
   document.getElementById("gallery").innerHTML = imageList.join("");
 </script>
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Lightbox Container -->
+<div id="backdrop"></div>
+<div class="box">
+    <span class="close">&times;</span>
+    <div class="content"></div>
+</div>
+
+<!-- Lightbox Script -->
+<script>
+$(document).ready(function(){
+    // When any image in the gallery is clicked
+    $("#gallery img").on("click", function(){
+        // Clone the clicked image into the lightbox
+        var cloneImg = $(this).clone();
+        $(".box .content").empty().append(cloneImg);
+        
+        // Show the backdrop and lightbox with fade-in
+        $("#backdrop, .box").fadeIn(400);
+    });
+
+    // When close button or backdrop is clicked, fade out
+    $(".close, #backdrop").on("click", function(){
+        $("#backdrop, .box").fadeOut(400);
+    });
+});
+</script>
     </body>
 </html>
